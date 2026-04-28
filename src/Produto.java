@@ -37,7 +37,7 @@ public class Produto {
     }
 
     public void cadastrar() throws SQLException, ClassNotFoundException {
-        Connection con=getConexao();
+        Connection con = getConexao();
         PreparedStatement comando = con.prepareStatement("insert into produtos(descricao, preco) values (?,?)");
         comando.setString (1, descricao);
         comando.setDouble(2, preco);
@@ -95,7 +95,7 @@ public class Produto {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             return DriverManager.getConnection
-                    ("jdbc:mysql://localhost:3306/aula_ioo", "root", "H0l1ow_z3r@");
+                    ("jdbc:mysql://localhost:3306/aula_ioo", "root", "");
         } catch (ClassNotFoundException | SQLException| NullPointerException ex) {
             System.out.println(ex);
             return null;
