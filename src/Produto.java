@@ -93,7 +93,7 @@ public class Produto {
 
     public Connection getConexao(){
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("java.sql.Driver");
             return DriverManager.getConnection
                     ("jdbc:mysql://localhost:3306/aula_ioo", "root", "");
         } catch (ClassNotFoundException | SQLException| NullPointerException ex) {
